@@ -1,0 +1,27 @@
+{
+  "name": "vkapi-lite",
+  "version": "1.4.0",
+  "description": "Lite VK API wrapper for Node.JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unInstance/vkapi-lite.git"
+  },
+  "keywords": [
+    "vk-api",
+    "vk"
+  ],
+  "author": "unInstance",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unInstance/vkapi-lite/issues"
+  },
+  "homepage": "https://github.com/unInstance/vkapi-lite#readme",
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
