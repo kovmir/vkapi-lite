@@ -26,4 +26,6 @@ client.on('newMessage', (event) => {
 
   client.stopPolling();
 });
+
+client.startPolling();
 ```
