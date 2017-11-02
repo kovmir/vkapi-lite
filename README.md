@@ -1,4 +1,7 @@
 # vkapi-lite
+
+[![NPM](https://nodei.co/npm/vkapi-lite.png)](https://nodei.co/npm/vkapi-lite/)
+
 Lite VK API wrapper for Node.JS
 
 ## Installation
