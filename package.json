@@ -1,6 +1,6 @@
 {
   "name": "vkapi-lite",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Lite VK API wrapper for Node.JS",
   "main": "index.js",
   "scripts": {
