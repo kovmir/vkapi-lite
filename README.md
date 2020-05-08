@@ -4,7 +4,7 @@
 
 Lite VK API wrapper for Node.JS
 
-## INSTALLATION
+# INSTALLATION
 
 ```
 npm install vkapi-lite
@@ -16,7 +16,7 @@ npm install vkapi-lite
 const ClientInstance = require('vkapi-lite');
 
 const client = new ClientInstance({
-  token: '',           // default: '' (empty string)
+  token: 'YOUR_TOKEN', // default: '' (empty string)
   debug: true,         // default: false
   logger: console.log, // if debug true
   version: 5.125,      // default 5.125
@@ -37,7 +37,6 @@ const getUserName = async function fetchUserNameById(id) {
 };
 
 getUserName(1);
-
 
 // Possible events: https://vk.com/dev/groups_events
 client.on('wall_post_new', (event) => {
