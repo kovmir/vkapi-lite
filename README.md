@@ -5,6 +5,7 @@
 Lite VK API wrapper for Node.JS
 
 ## INSTALLATION
+
 ```
 npm install vkapi-lite
 ```
@@ -12,26 +13,40 @@ npm install vkapi-lite
 # USAGE EXAMPLE
 
 ```javascript
-const UserInstance = require('vkapi-lite');
+const ClientInstance = require('vkapi-lite');
 
-const client = new UserInstance({
-  token: 'YOUR_TOKEN', //default: '' (empty string)
-  debug: true,         //default: false
-  logger: console.log, //if debug true
+const client = new ClientInstance({
+  token: '',           // default: '' (empty string)
+  debug: true,         // default: false
+  logger: console.log, // if debug true
+  version: 5.125,      // default 5.125
 });
 
+// The old way.
 client.callMethod('users.get', {
   user_ids: 1,
   fields: 'screen_name',
 }).then(console.log);
 
-client.on('newMessage', (event) => {
-  console.log(`${event[3]}: ${event[5]}`);
+// Modern async/await way.
+const getUserName = async function fetchUserNameById(id) {
+  const user = await client.callMethod('users.get', {
+    user_ids: id,
+  })
+  console.log(user[0].first_name);
+};
 
-  client.stopPolling();
+getUserName(1);
+
+
+// Possible events: https://vk.com/dev/groups_events
+client.on('wall_post_new', (event) => {
+  console.log(event);
+  client.stopBotPolling();
 });
 
-client.startPolling();
+// Bots Long Poll: https://vk.com/dev/bots_longpoll
+client.startBotPolling();
 ```
 
 # LICENSE
