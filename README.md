@@ -4,6 +4,17 @@
 
 Lite VK API wrapper for Node.JS
 
+# FYI
+
+VKontakte updated their privacy policy, and as a result of that refuses to give
+tokens with 'messages' access which is required for long polling. They have seen
+this project but refused to give me one anyway, so that I have no way to test
+polling for a user account. According to all the above, the user long polling
+part has been removed from this wrapper.
+
+Instead of the old way VKontakte expects developers to use Bot Polling API which
+is supported in this project.
+
 # INSTALLATION
 
 ```
