@@ -1,3 +1,10 @@
+# DEPRECATED
+
+* I do not use social media sites anymore.
+* JavaScript is the worst language the world has ever seen.
+* VKontakte is getting worse, and worse... They do not even allow using the API
+  to access the user's messages anymore.
+
 # vkapi-lite
 
 [![NPM](https://nodei.co/npm/vkapi-lite.png)](https://nodei.co/npm/vkapi-lite/)
